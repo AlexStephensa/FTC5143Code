@@ -16,6 +16,7 @@ import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.PIDCoefficients;
 
+import org.firstinspires.ftc.robotcore.external.Telemetry;
 import org.firstinspires.ftc.teamcode.xcentrics.components.Component;
 import org.firstinspires.ftc.teamcode.xcentrics.robots.Robot;
 import org.firstinspires.ftc.teamcode.xcentrics.util.CRServoQUS;
@@ -89,5 +90,11 @@ public class Launcher extends Component{
         halt.halt(0.5);
         feeder.queue_power(0);
         launch = false;
+    }
+    public void updateTelemetry(Telemetry telemetry){
+        addData("Launcher speed: ",launcher.motor.getVelocity());
+        addData("Feeder speed: ",feeder.servo.getPower());
+        addData("Can launch: ",canLaunch);
+        addData("Launch: ",launch);
     }
 }
