@@ -68,4 +68,8 @@ public abstract class Component {
         telemetry.addData(caption,vaule);
         PanelsTelemetry.INSTANCE.getTelemetry().addData(caption,vaule);
     }
+    public void addLine(String caption){
+        telemetry.addLine(caption);
+        PanelsTelemetry.INSTANCE.getTelemetry().addLine(caption);
+    }
 }

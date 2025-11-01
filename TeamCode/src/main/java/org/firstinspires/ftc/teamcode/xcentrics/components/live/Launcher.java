@@ -75,6 +75,7 @@ public class Launcher extends Component{
 
     @Override
     public void startup(){
+        super.startup();
         launcher.motor.setDirection(DcMotorSimple.Direction.REVERSE);
         launcher.motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         launcher.motor.setVelocityPIDFCoefficients(P,I,D,F);
@@ -82,6 +83,7 @@ public class Launcher extends Component{
 
     @Override
     public void shutdown(){
+        super.shutdown();
         launcher.queue_velocity(0);
         feeder.queue_power(0);
     }
@@ -92,6 +94,7 @@ public class Launcher extends Component{
         launch = false;
     }
     public void updateTelemetry(Telemetry telemetry){
+        super.updateTelemetry(telemetry);
         addData("Launcher speed: ",launcher.motor.getVelocity());
         addData("Feeder speed: ",feeder.servo.getPower());
         addData("Can launch: ",canLaunch);

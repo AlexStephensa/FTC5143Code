@@ -43,12 +43,15 @@ public class Intake extends Component {
         intake.queue_power(speed);
     }
     public void startup(){
+        super.startup();
         intake.motor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
     }
     public void shutdown(){
+        super.shutdown();
         intake.queue_power(0);
     }
     public void updateTelemetry(Telemetry telemetry){
+        super.updateTelemetry(telemetry);
         addData("Intake speed: ",speed);
     }
 }
