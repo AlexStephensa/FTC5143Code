@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.xcentrics.components;
 
 
+import com.bylazar.telemetry.PanelsTelemetry;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import org.firstinspires.ftc.teamcode.xcentrics.robots.Robot;
@@ -21,6 +22,7 @@ public abstract class Component {
 
     // The robot that we are a part of
     protected Robot robot;
+    protected Telemetry telemetry;
 
     protected final DecimalFormat TELEMETRY_DECIMAL = new DecimalFormat("##.00");
 
@@ -59,6 +61,11 @@ public abstract class Component {
         /**
          * Called on every update. Used for outputting information about the component to the phone for debug purposes
          */
-        telemetry.addData("[CMP "+name+"]", status == STATUS_ONLINE ? "ONLINE": "OFFLINE");
+        this.telemetry = telemetry;
+        addData("[CMP "+name+"]", status == STATUS_ONLINE ? "ONLINE": "OFFLINE");
+    }
+    public void addData(String caption,Object vaule){
+        telemetry.addData(caption,vaule);
+        PanelsTelemetry.INSTANCE.getTelemetry().addData(caption,vaule);
     }
 }
