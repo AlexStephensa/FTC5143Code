@@ -4,7 +4,7 @@ import org.firstinspires.ftc.teamcode.xcentrics.paths.TeleOpPaths;
 
 public class TeleOpLive extends LiveTeleopBase{
     private TeleOpPaths paths;
-    private
+
     @Override
     public void on_init() {
 
