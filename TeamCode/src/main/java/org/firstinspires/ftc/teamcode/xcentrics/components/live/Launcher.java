@@ -4,6 +4,8 @@ import static org.firstinspires.ftc.teamcode.xcentrics.components.live.LauncherC
 import static org.firstinspires.ftc.teamcode.xcentrics.components.live.LauncherConfig.F;
 import static org.firstinspires.ftc.teamcode.xcentrics.components.live.LauncherConfig.I;
 import static org.firstinspires.ftc.teamcode.xcentrics.components.live.LauncherConfig.P;
+import static org.firstinspires.ftc.teamcode.xcentrics.components.live.LauncherConfig.idleSpeed;
+import static org.firstinspires.ftc.teamcode.xcentrics.components.live.LauncherConfig.launchSpeed;
 import static org.firstinspires.ftc.teamcode.xcentrics.components.live.LauncherConfig.targetSpeed;
 import static org.firstinspires.ftc.teamcode.xcentrics.components.live.LauncherConfig.tolerance;
 
@@ -29,6 +31,8 @@ class LauncherConfig{
     public static double F = 0;
     public static int targetSpeed = 0;
     public static int tolerance = 50;
+    public static int idleSpeed = 100;
+    public static int launchSpeed = 1000;
 }
 public class Launcher extends Component{
     /// Motors ///
@@ -100,6 +104,12 @@ public class Launcher extends Component{
 
     public boolean canLaunch(){
         return canLaunch;
+    }
+    public void spinUp(){
+        setSpeed(launchSpeed);
+    }
+    public void spinDown(){
+        setSpeed(idleSpeed);
     }
     public void updateTelemetry(Telemetry telemetry){
         super.updateTelemetry(telemetry);
