@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.xcentrics.robots;
 
 
+
 import static org.firstinspires.ftc.teamcode.xcentrics.robots.RobotConfig.BULK_READ_1_CYCLE;
 import static org.firstinspires.ftc.teamcode.xcentrics.robots.RobotConfig.BULK_READ_2_CYCLE;
 import static org.firstinspires.ftc.teamcode.xcentrics.robots.RobotConfig.COMPONENT_UPDATE_CYCLE;
@@ -111,6 +112,7 @@ public class Robot {
     }
 
     public void update() {
+
         /**
          * This method is called as fast as possible by the update thread
          */

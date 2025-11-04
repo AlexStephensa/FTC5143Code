@@ -37,7 +37,13 @@ public class Intake extends Component {
         /// Motors ///
         intake = new DcMotorQUS(hardwareMap.get(DcMotorEx.class,"intake"));
     }
+    public void intake(){
+        speed = 0.5;
+    }
 
+    public void stopIntake(){
+        speed = 0;
+    }
     public void update(OpMode opMode){
         super.update(opMode);
         intake.queue_power(speed);

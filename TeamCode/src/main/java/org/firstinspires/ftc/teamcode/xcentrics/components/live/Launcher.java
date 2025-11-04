@@ -93,6 +93,14 @@ public class Launcher extends Component{
         feeder.queue_power(0);
         launch = false;
     }
+
+    public void setSpeed(int speed){
+        targetSpeed = speed;
+    }
+
+    public boolean canLaunch(){
+        return canLaunch;
+    }
     public void updateTelemetry(Telemetry telemetry){
         super.updateTelemetry(telemetry);
         addData("Launcher speed: ",launcher.motor.getVelocity());

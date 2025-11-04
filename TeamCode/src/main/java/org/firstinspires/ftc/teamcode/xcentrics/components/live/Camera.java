@@ -56,6 +56,9 @@ public class Camera extends Component {
         //adjust image decimation to trade-off detection-range for detection rate
         aprilTag.setDecimation(2);
     }
+    public void useCamera(boolean useCamera){
+        cameraOn = useCamera;
+    }
 
     public void update(OpMode opMode){
         super.update(opMode);
@@ -87,6 +90,9 @@ public class Camera extends Component {
     public void shutdown(){
         cameraOn = false;
         visionPortal.close();
+    }
+    public int foundID(){
+        return foundID;
     }
     public void updateTelemetry(Telemetry telemetry){
         // Step through the list of detections and display info for each one.
