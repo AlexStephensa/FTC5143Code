@@ -108,7 +108,7 @@ public class Launcher extends Component{
     public void spinUp(){
         setSpeed(launchSpeed);
     }
-    public void spinDown(){
+    public void idle(){
         setSpeed(idleSpeed);
     }
     public void updateTelemetry(Telemetry telemetry){

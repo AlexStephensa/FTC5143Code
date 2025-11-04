@@ -23,7 +23,7 @@ public class TeleOpLive extends LiveTeleopBase{
     @Override
     public void on_loop() {
         if(gamepad1.a){
-            robot.launcher.setSpeed();
+            robot.launcher.spinUp();
         }
 
     }
