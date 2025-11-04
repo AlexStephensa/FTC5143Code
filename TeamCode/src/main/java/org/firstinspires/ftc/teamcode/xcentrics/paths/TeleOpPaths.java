@@ -3,6 +3,7 @@ package org.firstinspires.ftc.teamcode.xcentrics.paths;
 import com.pedropathing.follower.Follower;
 import com.pedropathing.geometry.BezierLine;
 import com.pedropathing.geometry.Pose;
+import com.pedropathing.paths.Path;
 import com.pedropathing.paths.PathChain;
 
 public class TeleOpPaths {
@@ -19,7 +20,7 @@ public class TeleOpPaths {
     }
 
     //build paths
-    public void buildPaths(boolean isRed){
+    public PathChain buildPaths(boolean isRed){
         currentPose = follower.getPose();
         if(isRed){
             score = follower.pathBuilder()
@@ -33,5 +34,6 @@ public class TeleOpPaths {
                     .build();
         }
 
+        return score;
     }
 }
