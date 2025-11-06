@@ -27,12 +27,12 @@ public abstract class LiveTeleopBase extends LinearOpMode {
 
             on_loop();
 
-            for(int entry = 0; entry < todo_tasks.size(); entry++) {
-                if(todo_tasks.keyAt(entry) <= getRuntime()) {
-                    todo_tasks.valueAt(entry).run();
-                    todo_tasks.remove(todo_tasks.keyAt(entry));
-                }
-            }
+//            for(int entry = 0; entry < todo_tasks.size(); entry++) {
+//                if(todo_tasks.keyAt(entry) <= getRuntime()) {
+//                    todo_tasks.valueAt(entry).run();
+//                    todo_tasks.remove(todo_tasks.keyAt(entry));
+//                }
+//            }
 
         }
         on_stop();

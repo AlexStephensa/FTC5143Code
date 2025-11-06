@@ -42,7 +42,7 @@ public class TeleOpLive extends LiveTeleopBase{
 
         //teleop controls
        // if(!autoDrive) {
-            robot.follower.setTeleOpDrive(gamepad1.left_stick_y, gamepad1.left_stick_x, gamepad1.right_stick_x);
+            robot.follower.setTeleOpDrive(gamepad1.right_stick_x, gamepad1.left_stick_y, gamepad1.left_stick_x);
         //}
 
         //spin up launcher
