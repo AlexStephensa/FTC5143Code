@@ -60,8 +60,13 @@ public class TeleOpLive extends LiveTeleopBase{
             robot.launcher.idle();
         }
 
-        if(gamepad2.x){
+        //intake forward
+        if(gamepad2.y){
             robot.intake.intake();
+        }
+        //intake reverse
+        if(gamepad2.x){
+            robot.intake.reverseIntake();
         }
 
 

@@ -41,11 +41,14 @@ public class Intake extends Component {
 
     }
     public void intake(){
-        speed = 0.5;
+        speed = 1;
     }
 
     public void stopIntake(){
         speed = 0;
+    }
+    public void reverseIntake(){
+        speed = -1;
     }
     public void update(OpMode opMode){
         super.update(opMode);
